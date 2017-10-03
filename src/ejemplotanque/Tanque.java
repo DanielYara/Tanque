@@ -23,6 +23,7 @@ public class Tanque {
             if(i >= 0 || i < 18)
                 this.imagenes[i] = i + ".png";
             else if(i < 0){
+                i = 0;
                 this.imagenes[i] = 1 + ".png";
             } else{
                 i = 18;
