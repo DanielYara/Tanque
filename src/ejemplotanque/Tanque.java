@@ -20,17 +20,9 @@ public class Tanque {
         this.y = y;
         this.imagenes = new String[18];
         for(int i = 0; i < 18; i++){
-            if(i >= 0 || i < 18)
-                this.imagenes[i] = i + ".png";
-            else if(i < 0){
-                i = 0;
-                this.imagenes[i] = 1 + ".png";
-            } else{
-                i = 18;
-                this.imagenes[i] = 18 + ".png";
-            }
+            this.imagenes[i] = (i+1) + ".png";
         }
-        this.angulo = 1;
+        this.angulo = 0;
     }
 
     public int getX() {

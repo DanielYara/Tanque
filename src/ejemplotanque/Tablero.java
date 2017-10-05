@@ -98,9 +98,15 @@ public class Tablero extends JPanel implements ActionListener, MouseListener, Ke
         public void keyPressed(KeyEvent e) {
             int key = e.getKeyCode();
             if(key == KeyEvent.VK_LEFT)
-                tanque.setAngulo(tanque.getAngulo()-1);
+                if(tanque.getAngulo() > 1)
+                    tanque.setAngulo(tanque.getAngulo()-1);
+                else if(tanque.getAngulo() <= 1)
+                    tanque.setAngulo(0);
             if(key == KeyEvent.VK_RIGHT)
-                tanque.setAngulo(tanque.getAngulo()+1);
+                if(tanque.getAngulo() < 17)
+                    tanque.setAngulo(tanque.getAngulo()+1);
+                else if(tanque.getAngulo() >= 17)
+                    tanque.setAngulo(17);
         }
     }
     
